@@ -1,0 +1,132 @@
+body {
+    background-color: #3b3f45;
+    font-family: "Roboto", sans-serif;
+    font-style: normal;
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    align-items: center;
+}
+
+.container {
+    background-color: #3b3f45;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 793px;
+}
+
+.header-container {
+    background-color: #4a4f56;
+    height: 82px;
+    text-align: center;
+    padding: 10px;
+}
+
+h1 {
+    color: #ff8984;
+    margin-bottom: 0;
+}
+
+p {
+    color: #ff8984;
+    margin-top: 10px;
+}
+
+.shopping-list {
+    text-align: center;
+    align-items: center;
+    list-style-type: none;
+    padding: 0;
+    margin: 15px 0;
+    width: 534px;
+    margin-left: 129px;
+}
+
+.shopping-list li {
+    background-color: #88839e;
+    margin: 0;
+    padding: 15px;
+    width: 534px;
+    position: relative;
+    transition: background-color 0.3s ease;
+    color: #fff; /* Текст внутри <li> белого цвета */
+}
+
+.shopping-list li:nth-child(even) {
+    background-color: #93899d; /* Темный фон для четных элементов */
+}
+
+.shopping-list li:nth-child(odd) {
+    background-color: #7a7183; /* Светлый фон для нечетных элементов */
+}
+
+.shopping-list li:hover {
+    background-color: #72689c;
+}
+
+.shopping-list li:hover::before,
+.shopping-list li:hover::after {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background-color: #fff;
+}
+
+.shopping-list li:hover::before {
+    top: 0;
+}
+
+.shopping-list li:hover::after {
+    bottom: 0;
+}
+
+.shopping-list input[type="checkbox"] {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    transform: scale(1.5);
+}
+
+.shopping-list label {
+    margin-left: 50px;
+    font-size: 18px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.shopping-list .item__input:checked + .item__text {
+    color: #bbb;
+    text-decoration: line-through;
+}
+
+.shopping-list .item__input:checked:checked + .item__text {
+    color: #525151;
+}
+
+.shopping-list li:active {
+    background-color: #ff6f6f;
+    transition: background-color 0.1s ease;
+}
+
+footer {
+    margin-top: 5px;
+    color: #ff8984;
+    font-size: 20px;
+    text-align: center;
+}
+
+.footer-container {
+    position: relative;
+    background-color: #4a4f56;
+    text-align: center;
+    width: 565px;
+    height: 45px;
+    left: 129px;
+    margin: 0;
+}
